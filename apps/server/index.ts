@@ -1,9 +1,8 @@
 import express from "express";
-import userRouter from "./router/userRouter";
+const port=process.env.port||4000
 const app=express();
-const port=4000;
 app.use(express.json());
-app.use("/api/v1/user/",userRouter);
+console.log(port);
 app.listen(port,()=>{
-    console.log(`server is runnig on port ${port}`);
+    console.log(`server is running on ${port}`);
 })
